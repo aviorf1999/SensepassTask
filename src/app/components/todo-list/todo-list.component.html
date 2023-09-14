@@ -1,0 +1,21 @@
+<div class="main-container">
+  <h1 class="title">Todo List</h1>
+  <div class="add-todo-container">
+    <mat-form-field>
+    <input matInput [(ngModel)]="newTodo" placeholder="Enter your todo">
+    </mat-form-field>
+    <button class="btn btn-success mb-3" (click)="addTodo()">Add</button>
+  </div>
+  <div class="err-msg-container">
+    {{errMsg}}
+  </div>
+  <div class="card-deck">
+    <app-todo-card
+     *ngFor="let todo of todos" 
+     [todo]="todo" 
+     (edit)="editTodo($event)" 
+     (delete)="deleteTodo($event)">
+    </app-todo-card>
+  </div>
+  
+</div>

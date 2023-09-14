@@ -1,0 +1,71 @@
+.card {
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  /* Set a fixed width */
+  margin: 5px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.card-body {
+  height: 10rem;
+  /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editing-mode {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.boolean-value {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.done-label {
+  align-self: center;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-checkbox {
+  margin-left: 5px;
+}
+
+button {
+  border-radius: 10px;
+}
+
+.done-edit-container {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}

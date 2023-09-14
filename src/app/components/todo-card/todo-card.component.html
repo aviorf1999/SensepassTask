@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-body">
+    <ng-container *ngIf="!editing; else editingMode">
+      <h5 class="card-title">{{ todo.text }}</h5>
+      <div class="boolean-value" [class.green]="todo.done" [class.red]="!todo.done">
+        {{ todo.done ? 'Done' : 'Not Done' }}
+      </div>
+      <div class="buttons">
+        <button mat-raised-button color="primary" (click)="startEditing()">Edit</button>
+        <button mat-raised-button color="warn" (click)="deleteTodo()">Delete</button>
+      </div>
+    </ng-container>
+    <ng-template #editingMode>
+      <div class="editing-mode">
+        <div class="form-group">
+          <mat-form-field>
+            <input 
+              matInput
+              [(ngModel)]="todo.text" 
+            />
+          </mat-form-field>
+        </div>
+        <div class="done-edit-container">
+          <mat-label class="done-label">Done:</mat-label>
+          <mat-checkbox [(ngModel)]="todo.done"></mat-checkbox>
+        </div>
+        <div class="buttons">
+          <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
+          <button mat-raised-button color="accent" (click)="cancelEditing()">Cancel</button>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
